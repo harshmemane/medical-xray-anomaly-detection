@@ -36,10 +36,9 @@
 
 ## 🔬 Overview
 
-This project implements an automated **chest X-ray anomaly detection system** using deep learning. It was developed as an M.Tech Mini Project to detect pathological findings in chest X-rays from the NIH ChestX-ray14 dataset.
-
-### 🎯 What This Project Does:
-- Detects **14 different chest pathologies** from X-ray images
+This project implements an automated **chest X-ray anomaly detection system** using deep learning.It was developed as an M.Tech Mini Project to classify chest X-rays as Normal or Pneumonia using the Kaggle Chest X-Ray Images dataset.###
+🎯 What This Project Does:
+- classifies chest X-rays as **Normal or Pneumonia** (binary classification)
 - Uses **transfer learning** with a pre-trained DenseNet121 backbone
 - Performs **fairness/bias analysis** across gender and age groups
 - Provides detailed performance metrics and visualizations
@@ -84,7 +83,7 @@ Input: Chest X-Ray Image (224×224×3)
 └─────────────────────┘
          │
          ▼
-Output: 14-class Pathology Prediction
+Output: Binary Classification (NORMAL / PNEUMONIA)
 ```
 
 ### Why DenseNet121?
@@ -168,13 +167,12 @@ pip install -r requirements.txt
 ### Step 4: Download Dataset & Model
 > ⚠️ The dataset (2GB) and model weights are not included in this repository due to size limits.
 
-**Dataset (NIH ChestX-ray14):**
-- Download from: https://nihcc.app.box.com/v/ChestXray-NIHCC
+**Dataset (Kaggle Chest X-Ray Images):**
+- Download from: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 - Place images in: `data/images/`
-- Place `Data_Entry_2017.csv` in: `data/`
 
 **Trained Model Weights:**
-- Download from: - Download from: [densenet_best.keras]https://drive.google.com/file/d/1g2swCViJDxmZAy06icVuO2ncRFBdT9Bn/view?usp=sharing
+- Download from: [densenet_best.keras](https://drive.google.com/file/d/1g2swCViJDxmZAy06icVuO2ncRFBdT9Bn/view?usp=sharing)
 - Place in: `models/densenet_best.keras`
 
 ---
@@ -191,17 +189,15 @@ Then open notebooks in the `notebooks/` folder, starting from `01_data_explorati
 
 ## 🗃️ Dataset
 
-**NIH ChestX-ray14** — One of the largest publicly available chest X-ray datasets.
-
 | Property | Value |
 |----------|-------|
-| Total Images | 112,120 |
-| Images Used | 5,840 |
-| Image Size | 1024×1024 px |
-| Pathologies | 14 |
-| Source | National Institutes of Health |
+| Dataset Name | Chest X-Ray Images (Pneumonia) |
+| Total Images | 5,840 |
+| Classes | 2 (NORMAL, PNEUMONIA) |
+| Source | Kaggle |
+| Original Source | Guangzhou Women and Children's Medical Center |
 
-📥 **Download:** https://nihcc.app.box.com/v/ChestXray-NIHCC
+📥 **Download:** https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 
 ---
 
@@ -233,12 +229,12 @@ If you use this project in your research or academic work, please cite:
   title     = {Medical X-Ray Anomaly Detection using DenseNet121},
   year      = {2024},
   publisher = {GitHub},
-  url       = {url       = {https://github.com/harshmemane/medical-xray-anomaly-detection}
-}
+  url       ={https://github.com/harshmemane/medical-xray-anomaly-detection}
 ```
 
 **Original Dataset:**
-> Wang, X. et al. (2017). *ChestX-ray8: Hospital-scale Chest X-ray Database and Benchmarks.* CVPR.
+> Kermany, D. et al. (2018). *Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning.* Cell, 172(5), 1122-1131.
+> Dataset available at: https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 
 ---
 
