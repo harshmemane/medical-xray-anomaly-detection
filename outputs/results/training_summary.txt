@@ -1,0 +1,14 @@
+
+TRAINING SUMMARY
+================
+Date          : 2026-04-11 10:53
+Model         : DenseNet121 + Custom Head
+Dataset       : Kaggle Chest X-ray (5,840 images)
+
+RESULTS
+-------
+Total epochs  : 24
+Phase A AUC   : 0.9923
+Phase B AUC   : 0.9957
+Best val AUC  : 0.9957 (epoch 9)
+Best val Acc  : 0.9772 (epoch 18)

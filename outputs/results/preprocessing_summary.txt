@@ -1,0 +1,56 @@
+
+╔══════════════════════════════════════════════════════╗
+║         PREPROCESSING SUMMARY - NOTEBOOK 3          ║
+╚══════════════════════════════════════════════════════╝
+
+PROJECT : Medical X-ray Anomaly Detection
+DATASET : Kaggle Chest X-ray (Pneumonia)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DATASET STATISTICS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Total Images   : 5,840
+  NORMAL       : 1,575 (27.0%)
+  PNEUMONIA    : 4,265 (73.0%)
+Imbalance Ratio: 1 : 2.7
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DATA SPLITS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Train   : 4,087 rows (70%) - 256 batches
+Val     :   877 rows (15%) -  55 batches
+Test    :   876 rows (15%) -  55 batches
+Split   : Stratified (class ratio preserved)
+Seed    : 42
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+IMAGE PREPROCESSING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Input Format   : JPEG images (variable sizes)
+Output Shape   : (224, 224, 3) float32
+Normalization  : Pixel values / 255.0 → [0.0, 1.0]
+Decoder        : tf.image.decode_image (JPEG safe)
+Batch Size     : 16
+Prefetch       : AUTOTUNE
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+AUGMENTATION (Training Only)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. random_flip_left_right  : YES
+2. random_brightness       : max_delta = 0.1
+3. random_contrast         : lower=0.9, upper=1.1
+4. clip_by_value           : range [0.0, 1.0]
+5. random_crop             : NO (TF 2.19.0 bug)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SAVED FILES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+plots/class_distribution.png
+plots/demographic_distribution.png
+plots/sample_xrays.png
+plots/sample_batch.png
+results/processed_metadata.csv
+results/train.csv
+results/val.csv
+results/test.csv
+results/preprocessing_summary.txt
