@@ -174,7 +174,7 @@ pip install -r requirements.txt
 - Place `Data_Entry_2017.csv` in: `data/`
 
 **Trained Model Weights:**
-- Download from: [Google Drive Link] ← *(update this after uploading)*
+- Download from: - Download from: [densenet_best.keras]https://drive.google.com/file/d/1g2swCViJDxmZAy06icVuO2ncRFBdT9Bn/view?usp=sharing
 - Place in: `models/densenet_best.keras`
 
 ---
@@ -229,11 +229,11 @@ If you use this project in your research or academic work, please cite:
 
 ```bibtex
 @misc{medical_xray_anomaly_detection,
-  author    = {Harsh Gokul Memane},
+  author    = {Harsh Memane},
   title     = {Medical X-Ray Anomaly Detection using DenseNet121},
   year      = {2024},
   publisher = {GitHub},
-  url       = {https://github.com/harshmemane/medical-xray-anomaly-detection}
+  url       = {url       = {https://github.com/harshmemane/medical-xray-anomaly-detection}
 }
 ```
 
