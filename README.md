@@ -227,7 +227,7 @@ If you use this project in your research or academic work, please cite:
 @misc{medical_xray_anomaly_detection,
   author    = {Harsh Memane},
   title     = {Medical X-Ray Anomaly Detection using DenseNet121},
-  year      = {2024},
+  year      = {2025},
   publisher = {GitHub},
   url       ={https://github.com/harshmemane/medical-xray-anomaly-detection}
 ```
